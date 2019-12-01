@@ -5,12 +5,12 @@ import './style.css';
 
 class TodoList extends Component {
   render() {
-    const { todos, removeTodo } = this.props;
+    const { todos, updateTodo, removeTodo } = this.props;
     return (
       <div>
         {todos.map(todo => (
           <Fragment key={todo._id}>
-            <TodoItem todo={todo} removeTodo={removeTodo} />
+            <TodoItem todo={todo} updateTodo={updateTodo} removeTodo={removeTodo} />
             <div className="divider" />
           </Fragment>
         ))}
@@ -21,6 +21,7 @@ class TodoList extends Component {
 
 TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
+  updateTodo: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
 

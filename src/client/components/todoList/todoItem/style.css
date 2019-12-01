@@ -1,4 +1,8 @@
-.todo-tag {
+.todo-status {
+  width: 140px !important;
+}
+
+.todo-select {
   width: 120px !important;
 }
 

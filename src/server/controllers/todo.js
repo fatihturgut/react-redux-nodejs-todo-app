@@ -23,7 +23,7 @@ module.exports = {
     }
 
     Todo.updateOne({ _id: id }, { ...body })
-      .then(result => res.status(200).json(result))
+      .then(() => res.status(200).json(body))
       .catch(handleError(res));
   },
   remove: ({ params }, res) => {

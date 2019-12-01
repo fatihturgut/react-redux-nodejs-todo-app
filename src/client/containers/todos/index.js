@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Button, Card, Modal, Input, Select } from 'antd';
 import PropTypes from 'prop-types';
 import { statuses, priorities } from '../../constants';
-import { fetchTodos, addTodo, removeTodo } from '../../redux/actions/todo';
+import { fetchTodos, addTodo, updateTodo, removeTodo } from '../../redux/actions/todo';
 import TodoList from '../../components/todoList';
 import './style.css';
 
@@ -146,7 +146,7 @@ class Todos extends Component {
 
   render() {
     const { AddTodoModal } = this;
-    const { todos, removeTodo } = this.props;
+    const { todos, updateTodo, removeTodo } = this.props;
     const cardExtras = (
       <Button onClick={this.showModal} type="primary" shape="circle" icon="plus" />
     );
@@ -154,7 +154,7 @@ class Todos extends Component {
       <div className="container">
         <div className="ant-col-xs-24">
           <Card title="Todos" extra={cardExtras}>
-            <TodoList todos={todos} removeTodo={removeTodo} />
+            <TodoList todos={todos} updateTodo={updateTodo} removeTodo={removeTodo} />
           </Card>
         </div>
         <AddTodoModal />
@@ -167,6 +167,7 @@ Todos.propTypes = {
   todos: PropTypes.array.isRequired,
   fetchTodos: PropTypes.func.isRequired,
   addTodo: PropTypes.func.isRequired,
+  updateTodo: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
 
@@ -178,6 +179,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchTodos: () => dispatch(fetchTodos()),
   addTodo: data => dispatch(addTodo(data)),
+  updateTodo: data => dispatch(updateTodo(data)),
   removeTodo: id => dispatch(removeTodo(id)),
 });
 
