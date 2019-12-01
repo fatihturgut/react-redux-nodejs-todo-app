@@ -3,6 +3,7 @@ import {
   TODO_REJECTED,
   FETCH_TODOS_SUCCESS,
   ADD_TODO_SUCCESS,
+  UPDATE_TODO_SUCCESS,
   REMOVE_TODO_SUCCESS,
 } from '../constants/todo';
 
@@ -41,6 +42,14 @@ export const todo = (state = initialState, action) => {
         ...state,
         pending: false,
         todos: [...state.todos, action.data],
+        error: [],
+      };
+
+    case UPDATE_TODO_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        todos: state.todos.map(item => (item._id === action.data._id ? action.data : item)),
         error: [],
       };
 

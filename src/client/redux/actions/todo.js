@@ -60,10 +60,10 @@ export const addTodo = data => dispatch => {
     });
 };
 
-export const updateTodo = id => dispatch => {
-  const url = `${$E.TODO}/${id}`;
+export const updateTodo = data => dispatch => {
+  const url = `${$E.TODO}/${data._id}`;
   dispatch(pending());
-  request({ method: 'post', url })
+  request({ method: 'post', url, data })
     .then(response => dispatch(updateTodoSuccess(response.data)))
     .catch(error => {
       dispatch(rejected(error));
