@@ -1,0 +1,35 @@
+.todo-tag {
+  width: 120px !important;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex {
+  flex: 1;
+}
+
+.priority-icon {
+  margin-right: 10px;
+}
+
+.title-normal {
+  color: black;
+  text-decoration: none;
+}
+
+.title-completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.ellipsis {
+  display: inline-block;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
