@@ -66,7 +66,11 @@ class TodoItem extends Component {
               })}
             </Select>
           ) : (
-            <Tag onClick={() => this.handleTagClick(todo)} color={this.statusColor()}>
+            <Tag
+              className="todo-tag"
+              onClick={() => this.handleTagClick(todo)}
+              color={this.statusColor()}
+            >
               {status}
             </Tag>
           )}

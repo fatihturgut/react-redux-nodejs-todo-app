@@ -2,6 +2,10 @@
   width: 140px !important;
 }
 
+.todo-tag {
+  cursor: pointer !important;
+}
+
 .todo-select {
   width: 120px !important;
 }
