@@ -1,3 +1,9 @@
+# React Redux Nodejs Todo App
+Simple todo app that uses technologies like: React, Redux, Nodejs, Express, mongodb (mlab), antd.
+
+## Demo
+[Demoooo](https://react-node-todo1.herokuapp.com/)
+
 ## Quick Start
 
 ```bash
