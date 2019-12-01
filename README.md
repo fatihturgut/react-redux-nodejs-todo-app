@@ -8,10 +8,10 @@ Simple todo app that uses technologies like: React, Redux, Nodejs, Express, mong
 
 ```bash
 # Clone the repository
-git clone https://github.com/fatihturgut/react-node-todo-app.git
+git clone https://github.com/fatihturgut/react-redux-nodejs-todo-app.git
 
 # Go inside the directory
-cd react-node-todo-app
+cd react-redux-nodejs-todo-app
 
 # Install dependencies
 yarn (or npm install)
